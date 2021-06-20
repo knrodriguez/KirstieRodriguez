@@ -4,7 +4,7 @@ import { CONSTS, getImgPath, IMAGE_SIZES } from '../reducers/constants'
 
 export default (props) => {
     const { SIZES, TYPES } = CONSTS;
-    const headImage = getImgPath('head.png');
+    const headImage = getImgPath('2external-content.duckduckgo.com.jpg');
     const headRef = useRef(null);
     const [headWidth, setHeadWidth] = useState(0);
     const [headHeight, setHeadHeight] = useState(0);
@@ -13,6 +13,10 @@ export default (props) => {
     useEffect( () => {
         setDesktopMode(window.matchMedia("(min-width: 1500px)").matches)
     }, [])
+
+    function resize (){
+        setDesktopMode(window.matchMedia("(min-width: 1500px)").matches)
+    }
 
     function handleImageLoad(e){
         setHeadWidth(e.target.clientWidth)
@@ -23,7 +27,7 @@ export default (props) => {
         <>
             {
                 desktopMode ? 
-                <>
+                <div onResize={resize}>
                     Inside Kirstie's Mind
                     <div>
                         <img 
@@ -31,6 +35,7 @@ export default (props) => {
                             src={headImage} 
                             ref={headRef}
                             onLoad={handleImageLoad}
+                            style={{height: '50%', maxWidth: '33%'}}
                         />
                         <ThoughtBubble 
                             size={SIZES.MICRO} 
@@ -81,7 +86,7 @@ export default (props) => {
                         bottom={1.4 * headHeight}
                         left={headWidth + 4 * IMAGE_SIZES[SIZES.MD]}
                     />
-                </> :
+                </div> :
                 <>
                     Window Mode
                 </>
