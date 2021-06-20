@@ -1,18 +1,23 @@
 import React from 'react';
-import { IMAGE_SIZES, IMAGE_PATH } from '../reducers/constants';
+import { IMAGE_SIZES, getImgPath } from '../reducers/constants';
 
 export default (props) => {
-    const { size, type, outline, handleClick } = props;
-    const imgFileName=`${type}-${outline ? 'outline': 'transparent'}.png`;
+    const { size, type, handleClick, bottom, left } = props;
+    const imgFileName =`thick-${type}-outline.png`;
 
     const className = `${IMAGE_SIZES[size]}`;
+    const imgSrc = getImgPath(imgFileName);
 
     return (
-        <div style={{width: className, height: className}}>
-            <img 
-                src={`${IMAGE_PATH}${imgFileName}`} 
-                onClick={handleClick}
-            />
-        </div>
+        <img 
+            className={`image-container-${size}`}
+            src={imgSrc} 
+            onClick={handleClick}
+            style= {{
+                position: 'absolute', 
+                bottom: `${bottom}px`, 
+                left: `${left}px`,
+            }}
+        />
     )
 }

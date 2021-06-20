@@ -4,7 +4,9 @@ import { AboutMeView } from './views'
 
 const App = () => {
     return (
-        <AboutMeView />
+        <>
+            <AboutMeView />
+        </>
     )
 }
 
