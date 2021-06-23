@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { ThoughtBubble } from '../components';
+import { ThoughtBubble, Modal } from '../components';
 import { CONSTS, getImgPath, IMAGE_SIZES } from '../reducers/constants'
 import { getMedia } from '../reducers/tv-and-movies'
 
@@ -10,6 +10,7 @@ export default (props) => {
     const [headWidth, setHeadWidth] = useState(0);
     const [headHeight, setHeadHeight] = useState(0);
     const [desktopMode, setDesktopMode] = useState(false)
+    const [openModal, setOpenModal] = useState(false);
 
     useEffect( () => {
         setDesktopMode(window.matchMedia("(min-width: 1500px)").matches)
@@ -24,8 +25,22 @@ export default (props) => {
         setHeadHeight(e.target.clientHeight)
     }
 
+    function handleClick (func) {
+        console.log('in handle click')
+        func();
+        console.log('after func?')
+        setOpenModal(true);
+
+    }
+
     return (
         <>
+        { openModal && 
+            <>
+                <Modal />
+                <h1>Please WORK!</h1>
+            </>
+        }
             {
                 // desktopMode ? 
                 <div onResize={resize}>
@@ -86,7 +101,7 @@ export default (props) => {
                         type={TYPES.WIDE}
                         bottom={1.4 * headHeight}
                         left={headWidth + 4 * IMAGE_SIZES[SIZES.MD]}
-                        onClick={getMedia}
+                        onClick={() => handleClick(getMedia)}
                     />
                 </div> 
                 // :
