@@ -27,7 +27,7 @@ export default (props) => {
     return (
         <>
             {
-                desktopMode ? 
+                // desktopMode ? 
                 <div onResize={resize}>
                     Inside Kirstie's Mind
                     <div>
@@ -88,10 +88,11 @@ export default (props) => {
                         left={headWidth + 4 * IMAGE_SIZES[SIZES.MD]}
                         onClick={getMedia}
                     />
-                </div> :
-                <>
-                    Window Mode
-                </>
+                </div> 
+                // :
+                // <>
+                //     Window Mode
+                // </>
             }
         </>
     )
