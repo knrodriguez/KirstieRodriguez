@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ThoughtBubble } from '../components';
 import { CONSTS, getImgPath, IMAGE_SIZES } from '../reducers/constants'
+import { getMedia } from '../reducers/tv-and-movies'
 
 export default (props) => {
     const { SIZES, TYPES } = CONSTS;
@@ -85,6 +86,7 @@ export default (props) => {
                         type={TYPES.WIDE}
                         bottom={1.4 * headHeight}
                         left={headWidth + 4 * IMAGE_SIZES[SIZES.MD]}
+                        onClick={getMedia}
                     />
                 </div> :
                 <>

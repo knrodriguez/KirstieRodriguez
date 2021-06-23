@@ -2,7 +2,7 @@ import React from 'react';
 import { IMAGE_SIZES, getImgPath } from '../reducers/constants';
 
 export default (props) => {
-    const { size, type, handleClick, bottom, left } = props;
+    const { size, type, onClick, bottom, left } = props;
     const imgFileName =`thick-${type}-outline.png`;
 
     const className = `${IMAGE_SIZES[size]}`;
@@ -12,7 +12,7 @@ export default (props) => {
         <img 
             className={`image-container-${size}`}
             src={imgSrc} 
-            onClick={handleClick}
+            onClick={onClick}
             style= {{
                 position: 'absolute', 
                 bottom: `${bottom}px`, 
