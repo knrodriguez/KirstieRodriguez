@@ -1,24 +1,35 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MediaInfo from './MediaInfo';
 
-export default ({modalData: {data, type}}) => {
+export default (props) => {
+    const {modalData: {data, type}, closeModal} = props;
     const [item, setItem] = useState({});
+    
+    useEffect(() => {
+        const randIdx = Math.floor(Math.random() * data.length)
+        setItem(data[randIdx])
+    }, [])
     
     function handleChange (e){
         setItem(data[e.target.value])
     }
 
     return (
-        <div id='modal-container'>
+        <div id='modal-container' onClick={closeModal}>
             <div id='modal-data-container'>
-                <select id='modal-dropdown' 
+                <select id='modal-dropdown'
+                    class='margin10' 
                     onChange={handleChange}
-                    class='margin10'
                 >
                     {
                         data.length && 
-                        data.map((item, idx) => (
-                            <option value={idx}>{item.title}</option>
+                        data.map((datum, idx) => (
+                            <option 
+                                value={idx} 
+                                selected={item.title === datum.title}
+                            >
+                                {datum.title}
+                            </option>
                         ))
                     }
                 </select>

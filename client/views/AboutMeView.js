@@ -30,14 +30,23 @@ export default (props) => {
         const data = await getFunc();
         setModalData({data, type});
         setOpenModal(true);
+    }
 
+    function closeModal(e){
+        console.log(e.target)
+        if(e.target.id === 'modal-container'){
+            setOpenModal(false);
+        }
     }
     
     return (
         <>
             { openModal && 
                 <>
-                    <Modal modalData={modalData} />
+                    <Modal 
+                        modalData={modalData} 
+                        closeModal={closeModal} 
+                    />
                 </>
             }
             {
