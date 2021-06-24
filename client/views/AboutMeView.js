@@ -11,6 +11,7 @@ export default (props) => {
     const [headHeight, setHeadHeight] = useState(0);
     const [desktopMode, setDesktopMode] = useState(false)
     const [openModal, setOpenModal] = useState(false);
+    const [modalData, setModalData] = useState([]);
 
     useEffect( () => {
         setDesktopMode(window.matchMedia("(min-width: 1500px)").matches)
@@ -25,22 +26,20 @@ export default (props) => {
         setHeadHeight(e.target.clientHeight)
     }
 
-    function handleClick (func) {
-        console.log('in handle click')
-        func();
-        console.log('after func?')
+    async function handleClick (getFunc, type) {
+        const data = await getFunc();
+        setModalData({data, type});
         setOpenModal(true);
 
     }
-
+    
     return (
         <>
-        { openModal && 
-            <>
-                <Modal />
-                <h1>Please WORK!</h1>
-            </>
-        }
+            { openModal && 
+                <>
+                    <Modal modalData={modalData} />
+                </>
+            }
             {
                 // desktopMode ? 
                 <div onResize={resize}>
@@ -101,7 +100,7 @@ export default (props) => {
                         type={TYPES.WIDE}
                         bottom={1.4 * headHeight}
                         left={headWidth + 4 * IMAGE_SIZES[SIZES.MD]}
-                        onClick={() => handleClick(getMedia)}
+                        onClick={() => handleClick(getMedia, 'media')}
                     />
                 </div> 
                 // :

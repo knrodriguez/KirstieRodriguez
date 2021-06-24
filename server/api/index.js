@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
-const {TMDB_API_KEY_V3, LIST_ID, getImageUri} = require('./../../secrets');
-const {Media} = require('../models')
+const {TMDB_API_KEY_V3, LIST_ID} = require('./../../secrets');
+const {Media} = require('./../models')
 
 router.get('/tv-and-movies', async (req,res,next) => {
     try {
@@ -13,14 +13,8 @@ router.get('/tv-and-movies', async (req,res,next) => {
         })
 
         const media = list.results.map(record => {
-            return new Media(
-                record.name, 
-                getImageUri(config, record.poster_path),
-                record.first_air_date.slice(0,4),
-                record.overview
-            )
+            return new Media(config, record)
         })
-        
         res.send(media);
     } catch (error) {
         next(error);

@@ -1,11 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
+import MediaInfo from './MediaInfo';
 
-export default (props) => {
+export default ({modalData: {data, type}}) => {
+    const [item, setItem] = useState({});
+    
+    function handleChange (e){
+        setItem(data[e.target.value])
+    }
+
     return (
         <div id='modal-container'>
-            <img 
-                id='modal-background'
-                src='/assets/images/dream-bubble.png' />
+            <div id='modal-data-container'>
+                <select id='modal-dropdown' onChange={handleChange}>
+                    {
+                        data.length && 
+                        data.map((item, idx) => (
+                            <option value={idx}>{item.title}</option>
+                        ))
+                    }
+                </select>
+                <div id='modal-selection' 
+                    class='flexbox width55 rounded-corners'>
+                    { type === 'media' && item.id && <MediaInfo data={item} /> }
+                    {/* { type === 'game' && <MediaInfo data={data} /> }
+                    { type === 'code' && <MediaInfo data={data} /> } */}
+                </div>
+            </div>
         </div>
     )
 }
