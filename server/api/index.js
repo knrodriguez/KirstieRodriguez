@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const axios = require('axios');
-const {TMDB_API_KEY_V3, LIST_ID} = require('./../../secrets');
+require('dotenv').config();
+//const {TMDB_API_KEY_V3, LIST_ID} = require('./../../secrets');
 const {Media} = require('./../models')
 
 router.get('/tv-and-movies', async (req,res,next) => {
     try {
-        const {data: config} = await axios.get(`https://api.themoviedb.org/3/configuration?api_key=${TMDB_API_KEY_V3}`);
-        const {data: list} = await axios.get(`https://api.themoviedb.org/4/list/${LIST_ID}?api_key=${TMDB_API_KEY_V3}`, {
+        const {data: config} = await axios.get(`https://api.themoviedb.org/3/configuration?api_key=${process.env.TMDB_API_KEY_V3}`);
+        const {data: list} = await axios.get(`https://api.themoviedb.org/4/list/${process.env.LIST_ID}?api_key=${process.env.TMDB_API_KEY_V3}`, {
             headers: {
                 "Content-Type": "application/json;charset=utf-8"
             }

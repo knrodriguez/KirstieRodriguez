@@ -2,3 +2,4 @@
 /public/bundle.js
 /public/bundle.js.LICENSE.txt
 secrets.js
+.env

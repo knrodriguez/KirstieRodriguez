@@ -33,7 +33,6 @@ export default (props) => {
     }
 
     function closeModal(e){
-        console.log(e.target)
         if(e.target.id === 'modal-container'){
             setOpenModal(false);
         }
