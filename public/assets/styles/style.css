@@ -118,11 +118,6 @@ img {
     min-width: 800px;
     height: 100%;
 }
-
-/* #modal-selection{
-    z-index: 4; 
-
-} */
   
 .flexbox{
     display: flex;
@@ -161,12 +156,8 @@ img {
     border-radius: 15px 0px 0px 15px;
 }
 
-/* #modal-selection{
-    transition-property: box-shadow;
-} */
-
 #modal-selection:hover{
     box-shadow:4px 2px 2px darkgray;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba( 216, 216, 216, 0.1);
     cursor: pointer;
 }

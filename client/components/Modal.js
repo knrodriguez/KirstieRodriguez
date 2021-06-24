@@ -11,7 +11,10 @@ export default ({modalData: {data, type}}) => {
     return (
         <div id='modal-container'>
             <div id='modal-data-container'>
-                <select id='modal-dropdown' onChange={handleChange}>
+                <select id='modal-dropdown' 
+                    onChange={handleChange}
+                    class='margin10'
+                >
                     {
                         data.length && 
                         data.map((item, idx) => (
@@ -20,7 +23,8 @@ export default ({modalData: {data, type}}) => {
                     }
                 </select>
                 <div id='modal-selection' 
-                    class='flexbox width55 rounded-corners'>
+                    class='flexbox width55 rounded-corners'
+                >
                     { type === 'media' && item.id && <MediaInfo data={item} /> }
                     {/* { type === 'game' && <MediaInfo data={data} /> }
                     { type === 'code' && <MediaInfo data={data} /> } */}
