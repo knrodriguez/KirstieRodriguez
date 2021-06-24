@@ -1,4 +1,7 @@
-const {getImageUri} = require('./../../secrets.js');
+const getImageUri = (config, path) => {
+    const {base_url, poster_sizes} = config.images;
+    return `${base_url}${poster_sizes[2]}${path}`
+};
 
 module.exports = class {
     constructor(config, record){

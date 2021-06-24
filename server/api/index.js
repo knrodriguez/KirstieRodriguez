@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const axios = require('axios');
 require('dotenv').config();
-//const {TMDB_API_KEY_V3, LIST_ID} = require('./../../secrets');
 const {Media} = require('./../models')
 
 router.get('/tv-and-movies', async (req,res,next) => {
