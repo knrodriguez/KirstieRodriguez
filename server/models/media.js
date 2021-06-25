@@ -1,6 +1,6 @@
 const getImageUri = (config, path) => {
-    const {base_url, poster_sizes} = config.images;
-    return `${base_url}${poster_sizes[2]}${path}`
+    const {base_url} = config.images;
+    return `${base_url}original${path}`
 };
 
 module.exports = class {

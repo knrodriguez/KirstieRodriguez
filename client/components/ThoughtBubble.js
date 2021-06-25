@@ -15,8 +15,8 @@ export default (props) => {
             onClick={onClick}
             style= {{
                 position: 'absolute', 
-                bottom: `${bottom}px`, 
-                left: `${left}px`,
+                bottom: `${bottom}%`, 
+                left: `${left}%`,
             }}
         />
     )
