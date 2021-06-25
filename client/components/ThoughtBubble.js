@@ -1,5 +1,5 @@
 import React from 'react';
-import { IMAGE_SIZES, getImgPath } from '../reducers/constants';
+import { IMAGE_SIZES, getImgPath, CONSTS } from '../reducers/constants';
 
 export default (props) => {
     const { size, type, onClick, bottom, left } = props;
@@ -10,7 +10,8 @@ export default (props) => {
 
     return (
         <img 
-            className={`image-container-${size}`}
+            id={props.id ? props.id : ''}
+            className={`image-container-${size} ${type === CONSTS.TYPES.WIDE ? 'floating':''}`}
             src={imgSrc} 
             onClick={onClick}
             style= {{

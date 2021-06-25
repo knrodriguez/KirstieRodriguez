@@ -92,6 +92,7 @@ export default ({setOpenModal, setModalData}) => {
                     type={TYPES.WIDE}
                     bottom={.4 * headHeightPerc}
                     left={headWidthPerc + (2 * IMAGE_SIZES_PERCS[SIZES.MD])}
+                    id='games'
                 />
                 <ThoughtBubble 
                     size={SIZES.MD} 
@@ -99,6 +100,7 @@ export default ({setOpenModal, setModalData}) => {
                     bottom={1.3 * headHeightPerc}
                     left={headWidthPerc + (2.5 * IMAGE_SIZES_PERCS[SIZES.MD])}
                     onClick={() => handleClick(getMedia, 'media')}
+                    id='tv-and-movies'
                 />
         </>
     )
