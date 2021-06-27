@@ -41,7 +41,7 @@ export default ({setOpenModal, setModalData}) => {
 
     return (
         <>
-            <div>
+            <div style={{positon: 'block', width: '100vw', height: '100vh'}}>
                     <img 
                         id='head-image' 
                         src={headImage} 
@@ -86,6 +86,8 @@ export default ({setOpenModal, setModalData}) => {
                     type={TYPES.WIDE} 
                     bottom={.05 * headHeightPerc}
                     left={headWidthPerc + (0.8 * IMAGE_SIZES_PERCS[SIZES.MD])}
+                    onClick={() => handleClick(getMedia, 'media')}
+                    id='tv-and-movies'
                 />
                 <ThoughtBubble 
                     size={SIZES.MD} 
@@ -99,8 +101,6 @@ export default ({setOpenModal, setModalData}) => {
                     type={TYPES.WIDE}
                     bottom={1.3 * headHeightPerc}
                     left={headWidthPerc + (2.5 * IMAGE_SIZES_PERCS[SIZES.MD])}
-                    onClick={() => handleClick(getMedia, 'media')}
-                    id='tv-and-movies'
                 />
         </>
     )

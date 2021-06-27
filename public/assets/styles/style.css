@@ -197,9 +197,20 @@ img {
 }
 
 #tv-and-movies {
-    animation-delay: 0.5s;
+    animation-delay: 0.6s;
 }
 
 #games {
     animation-delay: 0.25s;
+}
+
+#tech-stack{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tech-stack-item{
+    width: 20%;
+    height: auto;
+    margin: 2% 2%;
 }

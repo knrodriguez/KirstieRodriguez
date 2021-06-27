@@ -28,7 +28,7 @@ export default (props) => {
     }
     
     return (
-        <>
+        <div>
             { openModal && 
                 <>
                     <Modal 
@@ -109,6 +109,6 @@ export default (props) => {
                 //     Window Mode
                 // </>
             } */}
-        </>
+        </div>
     )
 }
