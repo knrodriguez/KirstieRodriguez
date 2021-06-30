@@ -12,7 +12,7 @@
   command = "CI= npm run build-prod"
 
 [context.production]
-  publish = "/public"
+  publish = "./public"
   environment = {LIST_ID = "7099746",TMDB_API_KEY_V4 = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYzFlODYyZmVhYzA1NmY0MWFlYjc0MWVmYTZlNjYxMyIsInN1YiI6IjYwZDM0OWI0ZTU0ZDVkMDAyZWJmZTQyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VFOzDWz30I6JIjqFCJenl2qC_4btD5SkQx0SpyUefSc",TMDB_API_KEY_V3 = "0c1e862feac056f41aeb741efa6e6613",NODE_ENV = "production"}
 
 # The following redirect is intended for use with most SPAs that handle routing internally.
