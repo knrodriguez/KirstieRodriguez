@@ -9,7 +9,7 @@
   publish = "./public"
 
   # Default build command.
-  command = "CI= 'npm run build-prod'"
+  command = "CI= npm run build-prod"
 
 [context.production]
   publish = "/public"
