@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { ThoughtBubble, Modal } from '../components';
+import { ThoughtBubble, Modal, AboutMe1400 } from '../components';
 import { CONSTS, getImgPath, IMAGE_SIZES } from '../reducers/constants'
 import { getMedia } from '../reducers/tv-and-movies'
 
@@ -13,24 +13,13 @@ export default (props) => {
     const [openModal, setOpenModal] = useState(false);
     const [modalData, setModalData] = useState([]);
 
-    useEffect( () => {
-        setDesktopMode(window.matchMedia("(min-width: 1500px)").matches)
-    }, [])
+    // useEffect( () => {
+    //     setDesktopMode(window.matchMedia("(min-width: 1500px)").matches)
+    // }, [])
 
-    function resize (){
-        setDesktopMode(window.matchMedia("(min-width: 1500px)").matches)
-    }
-
-    function handleImageLoad(e){
-        setHeadWidth(e.target.clientWidth)
-        setHeadHeight(e.target.clientHeight)
-    }
-
-    async function handleClick (getFunc, type) {
-        const data = await getFunc();
-        setModalData({data, type});
-        setOpenModal(true);
-    }
+    // function resize (){
+    //     setDesktopMode(window.matchMedia("(min-width: 1500px)").matches)
+    // }
 
     function closeModal(e){
         if(e.target.id === 'modal-container'){
@@ -39,18 +28,22 @@ export default (props) => {
     }
     
     return (
-        <>
+        <div>
             { openModal && 
                 <>
                     <Modal 
-                        modalData={modalData} 
+                        {...modalData}
                         closeModal={closeModal} 
                     />
                 </>
             }
-            {
+            <AboutMe1400 
+                setOpenModal={setOpenModal} 
+                setModalData={setModalData}
+            />
+            {/* {
                 // desktopMode ? 
-                <div onResize={resize}>
+                <div>
                     Inside Kirstie's Mind
                     <div>
                         <img 
@@ -115,7 +108,7 @@ export default (props) => {
                 // <>
                 //     Window Mode
                 // </>
-            }
-        </>
+            } */}
+        </div>
     )
 }

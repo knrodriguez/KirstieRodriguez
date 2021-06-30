@@ -21,4 +21,12 @@ export const IMAGE_SIZES = {
     [CONSTS.SIZES.LG]: 350
 }
 
+export const IMAGE_SIZES_PERCS = {
+    [CONSTS.SIZES.MICRO]: 2,
+    [CONSTS.SIZES.MINI]: 3,
+    [CONSTS.SIZES.SM]: 4,
+    [CONSTS.SIZES.MD]: 23,
+    [CONSTS.SIZES.LG]: 45
+}
+
 export const getImgPath = ((filename) => `/assets/images/${filename}`);

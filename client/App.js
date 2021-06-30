@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AboutMeView } from './views'
+import { AboutMeView, TechStackView} from './views'
 
 const App = () => {
     return (
         <>
             <AboutMeView />
+            <TechStackView />
         </>
     )
 }

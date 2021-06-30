@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import MediaInfo from './MediaInfo';
 
-export default (props) => {
-    const {modalData: {data, type}, closeModal} = props;
+export default ({data, type, closeModal}) => {
     const [item, setItem] = useState({});
     
     useEffect(() => {
