@@ -11,8 +11,7 @@ export default (props) => {
         }
         getTechStack();
     }, [])
-
-    console.log(techStack)
+    
     return (
         <div id='tech-stack'>
             {

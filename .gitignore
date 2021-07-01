@@ -3,3 +3,5 @@
 /public/bundle.js.LICENSE.txt
 secrets.js
 .env
+# Local Netlify folder
+.netlify

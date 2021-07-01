@@ -22,6 +22,9 @@ exports.handler = async (event, context) => {
             body: JSON.stringify(media)
         }
     } catch (error) {
-        console.error(error)
+        return {
+            statusCode: error.response.status,
+            body: error.response.statusText
+        }
     }
 }
