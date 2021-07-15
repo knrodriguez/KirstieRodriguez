@@ -8,3 +8,12 @@ export const getMedia = async () => {
     console.log(error);
   }
 };
+
+export const getGames = async () => {
+  try {
+    const { data } = await axios.get("/api/games");
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}

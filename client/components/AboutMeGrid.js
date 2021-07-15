@@ -1,5 +1,5 @@
 import React from "react";
-import { getMedia } from "../reducers/tv-and-movies";
+import { getMedia, getGames } from "../reducers";
 
 const WIDE_BUBBLE_SRC = "assets/images/dream-bubble.png";
 const ROUND_BUBBLE_SRC = "assets/images/thick-round-outline3.png";
@@ -8,7 +8,6 @@ export default ({ setOpenModal, setModalData }) => {
 
   async function handleClick(func, type) {
     const data = await func();
-    console.log("res", data);
     setModalData({ data, type });
     setOpenModal(true);
   }
@@ -19,7 +18,7 @@ export default ({ setOpenModal, setModalData }) => {
         <h1>INSIDE MY MIND</h1>
       </div>
 
-      <div class="blue wide-bubble">
+      <div class="wide-bubble">
         <div class="wide-bubble">
           <img
             src={WIDE_BUBBLE_SRC}
@@ -29,21 +28,40 @@ export default ({ setOpenModal, setModalData }) => {
         </div>
       </div>
 
-      <div class="red wide-bubble">
+      <div class="wide-bubble">
         <div class="wide-bubble center">
           <img
             src={WIDE_BUBBLE_SRC}
             class="center floating games"
-            onClick={() => handleClick(getMedia, "media")}
+            onClick={() => handleClick(getGames, "game")}
           />
         </div>
       </div>
 
-      <div class="green wide-bubble">
-        <div class="wide-bubble">
+      <div class="wide-bubble floating" style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gridTemplateRows: '1fr'
+      }}>
+        <div style={{
+          gridColumnStart: '1',
+          gridRowStart: '1',
+          zIndex: '2',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          width: '100%',
+          textAlign: 'center'
+        }}>
+          <img src='assets/images/coding.gif'/>
+        </div>
+        
+        <div class="wide-bubble" style={{
+          gridColumnStart: '1',
+          gridRowStart: '1'
+        }}>
           <img
             src={WIDE_BUBBLE_SRC}
-            class='floating projects'
+            class='projects'
             onClick={() => handleClick(getMedia, "media")}
           />
         </div>

@@ -1,5 +1,5 @@
-const { Media } = require("../server/models");
 const axios = require("axios");
+const { Media } = require("../server/models");
 
 exports.handler = async (event, context) => {
   const configUrl = `https://api.themoviedb.org/3/configuration?api_key=${process.env.TMDB_API_KEY_V3}`;

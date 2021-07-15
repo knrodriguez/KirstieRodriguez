@@ -12,7 +12,7 @@ export default ({ data, type, closeModal }) => {
   function handleChange(e) {
     setItem(data[e.target.value]);
   }
-
+  
   return (
     <div id="modal-container" onClick={closeModal}>
       <div id="modal-data-container">
@@ -26,8 +26,8 @@ export default ({ data, type, closeModal }) => {
         </select>
         <div id="modal-selection" class="flexbox width55 rounded-corners">
           {type === "media" && item.id && <MediaInfo data={item} />}
-          {/* { type === 'game' && <MediaInfo data={data} /> }
-              { type === 'code' && <MediaInfo data={data} /> } */}
+          {type === 'game' && <MediaInfo data={item} />}
+              {/* { type === 'code' && <MediaInfo data={data} /> } */}
         </div>
       </div>
     </div>

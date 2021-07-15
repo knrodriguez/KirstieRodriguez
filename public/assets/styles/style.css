@@ -284,7 +284,7 @@ img {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 0.3fr 1.2fr 1fr;
-  background-color: rgba(127, 255, 212, 0.322);
+  background-color: rgb(45, 17, 82);
 }
 
 .center {
@@ -333,7 +333,7 @@ img {
   align-items: center;
   text-align: center;
   font-family: cloudy;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .title h1{
@@ -359,3 +359,17 @@ img {
     overflow: hidden;
     text-overflow: ellipsis;
 } */
+
+.coding{
+  position: absolute;
+  width: 100%;
+  top:0;
+  right:0;
+  height: auto;
+  z-index: 2;
+}
+
+.coding img {
+  max-width: 100%;
+  max-height: 100%;
+}

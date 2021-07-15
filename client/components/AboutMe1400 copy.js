@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import { ThoughtBubble } from ".";
 import { CONSTS, getImgPath, IMAGE_SIZES } from "../reducers/constants";
-import { getMedia } from "../reducers/tv-and-movies";
+import { getMedia } from "../reducers";
 
 export default (props) => {
   const { SIZES, TYPES } = CONSTS;

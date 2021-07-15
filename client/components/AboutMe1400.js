@@ -7,7 +7,7 @@ import {
   IMAGE_SIZES,
   IMAGE_SIZES_PERCS,
 } from "../reducers/constants";
-import { getMedia } from "../reducers/tv-and-movies";
+import { getMedia } from "../reducers";
 
 export default ({ setOpenModal, setModalData }) => {
   const { SIZES, TYPES } = CONSTS;
