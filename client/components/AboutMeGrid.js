@@ -15,7 +15,7 @@ export default ({ setOpenModal, setModalData }) => {
   return (
     <div class="aboutme-container">
       <div class="one-row title">
-        <h1>INSIDE MY MIND</h1>
+        <h1>INSIDE KIRSTIE'S MIND</h1>
       </div>
 
       <div class="wide-bubble">

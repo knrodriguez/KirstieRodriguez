@@ -13,6 +13,11 @@
   src: url('../fonts/Alphasmoke-OOX6.ttf');
 }
 
+@font-face {
+  font-family: comic-title;
+  src: url('../fonts/RoleyPoley-gxRop.otf');
+}
+
 /* body{
     background-image: url('../images/background.png');
     background-repeat: no-repeat;
@@ -278,13 +283,19 @@ img {
   width: 70%;
 }
 
+.wide-bubble img:hover{
+  cursor: pointer;
+}
+
 .aboutme-container {
   height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 0.3fr 1.2fr 1fr;
-  background-color: rgb(45, 17, 82);
+  background-image: url('../images/imageedit_47_8943911883.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .center {
@@ -321,24 +332,33 @@ img {
 
 .me{
   grid-column: span 6;
-  background-image: url("../images/face.jpeg");
+  background-image: url("../images/me0.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left bottom;
 }
 
+/* .me img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+} */
+
 .title{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  font-family: cloudy;
+  font-family: comic-title;
   font-size: 3em;
+  padding-top: 2%;
 }
 
 .title h1{
+  max-width: 950px;
   font-weight: lighter;
   animation: type 3s;
+  text-shadow: 2px 2px #ecdede;
   /* overflow: hidden;
   white-space: nowrap; */
 }
