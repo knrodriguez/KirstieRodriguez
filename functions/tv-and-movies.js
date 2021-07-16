@@ -5,6 +5,8 @@ exports.handler = async (event, context) => {
   const configUrl = `https://api.themoviedb.org/3/configuration?api_key=${process.env.TMDB_API_KEY_V3}`;
   const listUrl = `https://api.themoviedb.org/4/list/${process.env.LIST_ID}?api_key=${process.env.TMDB_API_KEY_V3}`;
 
+  console.log('INSIDE THE TV AND MOVIES HANDLER', process.env.LIST_ID);
+  
   try {
     const { data: config } = await axios.get(configUrl);
     const { data: list } = await axios.get(listUrl, {
