@@ -5,3 +5,4 @@ secrets.js
 .env
 # Local Netlify folder
 .netlify
+netlify.toml

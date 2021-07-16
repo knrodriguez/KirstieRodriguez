@@ -22,7 +22,8 @@ export default ({ setOpenModal, setModalData }) => {
           display: 'grid',
           gridTemplateColumns: '1fr',
           gridTemplateRows: '1fr',
-      }}>
+      }}
+      onClick={() => handleClick(getMedia, "media")}>
         <div style={{
           gridColumnStart: '1',
           gridRowStart: '1',
@@ -41,24 +42,22 @@ export default ({ setOpenModal, setModalData }) => {
           <img
             src={WIDE_BUBBLE_SRC}
             class='tv-and-movies'
-            onClick={() => handleClick(getMedia, "media")}
           />
         </div>
       </div>
 
-      <div class="wide-bubble floating" style={{
+      <div class="wide-bubble center floating" style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
           gridTemplateRows: '1fr',
-      }}>
-        <div style={{
+      }} 
+      onClick={() => handleClick(getGames, "game")}>
+        <div class='center' style={{
           gridColumnStart: '1',
           gridRowStart: '1',
           zIndex: '2',
           maxWidth: '50%',
           width: '40%',
-          // height: '50%',
-          // width: '100%',
           textAlign: 'center',
           marginBottom: '5%',
         }}>
@@ -72,26 +71,16 @@ export default ({ setOpenModal, setModalData }) => {
           <img
             src={WIDE_BUBBLE_SRC}
             class='center games'
-            onClick={() => handleClick(getMedia, "media")}
           />
         </div>
       </div>
-
-      {/* <div class="wide-bubble">
-        <div class="wide-bubble center">
-          <img
-            src={WIDE_BUBBLE_SRC}
-            class="center floating games"
-            onClick={() => handleClick(getGames, "game")}
-          />
-        </div>
-      </div> */}
 
       <div class="wide-bubble floating" style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
           gridTemplateRows: '1fr'
-      }}>
+      }}
+      onClick={() => handleClick(getMedia, "media")}>
         <div style={{
           gridColumnStart: '1',
           gridRowStart: '1',
