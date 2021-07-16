@@ -17,12 +17,12 @@ export default ({ data, type, closeModal }) => {
     <div id="modal-container" onClick={closeModal}>
       <div id="modal-data-container">
         <select id="modal-dropdown" class="margin10" onChange={handleChange}>
-          {data.length &&
+          {data?.length ?
             data.map((datum, idx) => (
               <option value={idx} selected={item.title === datum.title}>
                 {datum.title}
               </option>
-            ))}
+            )) : null}
         </select>
         <div id="modal-selection" class="flexbox width55 rounded-corners">
           {type === "media" && item.id && <MediaInfo data={item} />}

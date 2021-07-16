@@ -13,6 +13,8 @@ exports.handler = async (event, context) => {
       },
     });
 
+    console.log(config,data)
+
     const media = list.results.map((record) => {
       return new Media(config, record);
     });
