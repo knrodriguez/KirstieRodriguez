@@ -258,7 +258,7 @@ img {
   margin: 2% 2%;
 }
 
-.blue {
+/* .blue {
   background-color: blue;
 }
 
@@ -270,7 +270,7 @@ img {
 }
 .black {
   background-color: black;
-}
+} */
 
 .wide-bubble {
   display: grid;
