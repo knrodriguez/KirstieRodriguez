@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
       },
     });
 
-    console.log(config,data)
+    console.log(config,list)
 
     const media = list.results.map((record) => {
       return new Media(config, record);
@@ -26,9 +26,10 @@ exports.handler = async (event, context) => {
       body: JSON.stringify(media),
     };
   } catch (error) {
+    console.log(error)
     return {
-      statusCode: error.response.status,
-      body: error.response.statusText,
+      statusCode: 500,
+      body: error,
     };
   }
 };
