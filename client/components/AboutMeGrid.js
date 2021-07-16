@@ -18,17 +18,66 @@ export default ({ setOpenModal, setModalData }) => {
         <h1>INSIDE KIRSTIE'S MIND</h1>
       </div>
 
-      <div class="wide-bubble">
-        <div class="wide-bubble">
+      <div class="wide-bubble floating" style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gridTemplateRows: '1fr',
+      }}>
+        <div style={{
+          gridColumnStart: '1',
+          gridRowStart: '1',
+          zIndex: '2',
+          width: '65%',
+          textAlign: 'center',
+          marginBottom: '5%'
+        }}>
+          <img src='assets/images/tv.gif'/>
+        </div>
+        
+        <div class="wide-bubble" style={{
+          gridColumnStart: '1',
+          gridRowStart: '1'
+        }}>
           <img
             src={WIDE_BUBBLE_SRC}
-            class='floating tv-and-movies'
+            class='tv-and-movies'
             onClick={() => handleClick(getMedia, "media")}
           />
         </div>
       </div>
 
-      <div class="wide-bubble">
+      <div class="wide-bubble floating" style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gridTemplateRows: '1fr',
+      }}>
+        <div style={{
+          gridColumnStart: '1',
+          gridRowStart: '1',
+          zIndex: '2',
+          maxWidth: '50%',
+          width: '40%',
+          // height: '50%',
+          // width: '100%',
+          textAlign: 'center',
+          marginBottom: '5%',
+        }}>
+          <img src='assets/images/game.gif'/>
+        </div>
+        
+        <div class="wide-bubble" style={{
+          gridColumnStart: '1',
+          gridRowStart: '1'
+        }}>
+          <img
+            src={WIDE_BUBBLE_SRC}
+            class='center games'
+            onClick={() => handleClick(getMedia, "media")}
+          />
+        </div>
+      </div>
+
+      {/* <div class="wide-bubble">
         <div class="wide-bubble center">
           <img
             src={WIDE_BUBBLE_SRC}
@@ -36,7 +85,7 @@ export default ({ setOpenModal, setModalData }) => {
             onClick={() => handleClick(getGames, "game")}
           />
         </div>
-      </div>
+      </div> */}
 
       <div class="wide-bubble floating" style={{
           display: 'grid',
@@ -47,8 +96,6 @@ export default ({ setOpenModal, setModalData }) => {
           gridColumnStart: '1',
           gridRowStart: '1',
           zIndex: '2',
-          marginLeft: 'auto',
-          marginRight: 'auto',
           width: '100%',
           textAlign: 'center'
         }}>
