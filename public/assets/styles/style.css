@@ -284,7 +284,7 @@ img {
   width: 70%;
 }
 
-.wide-bubble img:hover{
+.wide-bubble *{
   cursor: pointer;
 }
 

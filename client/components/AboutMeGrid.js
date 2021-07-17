@@ -18,12 +18,22 @@ export default ({ setOpenModal, setModalData }) => {
         <h1>INSIDE KIRSTIE'S MIND</h1>
       </div>
 
-      <div class="wide-bubble floating" style={{
+      <div class='wide-bubble floating'>
+        <img src={WIDE_BUBBLE_SRC} />
+        <img style={{
+          position: 'absolute',
+          zIndex: 2,
+          maxWidth: '45%',
+          bottom: '8%'
+        }}
+        src='assets/images/tv.gif'/>
+      </div>
+
+      {/* <div class="wide-bubble floating" style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
           gridTemplateRows: '1fr',
-      }}
-      onClick={() => handleClick(getMedia, "media")}>
+      }}>
         <div style={{
           gridColumnStart: '1',
           gridRowStart: '1',
@@ -31,7 +41,8 @@ export default ({ setOpenModal, setModalData }) => {
           width: '65%',
           textAlign: 'center',
           marginBottom: '5%'
-        }}>
+        }}
+        onClick={() => handleClick(getMedia, "media")}>
           <img src='assets/images/tv.gif'/>
         </div>
         
@@ -42,25 +53,26 @@ export default ({ setOpenModal, setModalData }) => {
           <img
             src={WIDE_BUBBLE_SRC}
             class='tv-and-movies'
+            onClick={() => handleClick(getMedia, "media")}
           />
         </div>
-      </div>
+      </div> */}
 
       <div class="wide-bubble center floating" style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
           gridTemplateRows: '1fr',
-      }} 
-      onClick={() => handleClick(getGames, "game")}>
+      }} >
         <div class='center' style={{
           gridColumnStart: '1',
           gridRowStart: '1',
           zIndex: '2',
           maxWidth: '50%',
-          width: '40%',
+          width: '35%',
           textAlign: 'center',
           marginBottom: '5%',
-        }}>
+        }}
+        onClick={() => handleClick(getGames, "game")}>
           <img src='assets/images/game.gif'/>
         </div>
         
@@ -71,6 +83,7 @@ export default ({ setOpenModal, setModalData }) => {
           <img
             src={WIDE_BUBBLE_SRC}
             class='center games'
+            onClick={() => handleClick(getGames, "game")}
           />
         </div>
       </div>
@@ -79,15 +92,15 @@ export default ({ setOpenModal, setModalData }) => {
           display: 'grid',
           gridTemplateColumns: '1fr',
           gridTemplateRows: '1fr'
-      }}
-      onClick={() => handleClick(getMedia, "media")}>
+      }}>
         <div style={{
           gridColumnStart: '1',
           gridRowStart: '1',
           zIndex: '2',
           width: '100%',
           textAlign: 'center'
-        }}>
+        }}
+        onClick={() => handleClick(getMedia, "media")}>
           <img src='assets/images/coding.gif'/>
         </div>
         
