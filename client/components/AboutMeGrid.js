@@ -18,16 +18,27 @@ export default ({ setOpenModal, setModalData }) => {
         <h1>INSIDE KIRSTIE'S MIND</h1>
       </div>
 
-      <div class='wide-bubble floating'>
-        <img src={WIDE_BUBBLE_SRC} />
-        <img style={{
-          position: 'absolute',
-          zIndex: 2,
-          maxWidth: '45%',
-          bottom: '8%'
-        }}
-        src='assets/images/tv.gif'/>
+      <div class='floating cell-span-4-container'>
+        <div class='img-container cursor-hover'>
+          <img src={WIDE_BUBBLE_SRC}/>
+        </div>
+        <div class='overlay-img-container cursor-hover'>
+          <img src='assets/images/tv.gif'/>
+        </div>
       </div>
+
+      <div class='floating cell-span-4-container'>
+        <div class='img-container cursor-hover flex-start'>
+          <img src={WIDE_BUBBLE_SRC}/>
+        </div>
+        <div class='overlay-img-container cursor-hover flex-start'
+        style = {{
+          width: '35%'
+        }}>
+          <img src='assets/images/game.gif'/>
+        </div>
+      </div>
+
 
       {/* <div class="wide-bubble floating" style={{
           display: 'grid',
@@ -58,7 +69,7 @@ export default ({ setOpenModal, setModalData }) => {
         </div>
       </div> */}
 
-      <div class="wide-bubble center floating" style={{
+      {/* <div class="wide-bubble center floating" style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
           gridTemplateRows: '1fr',
@@ -114,7 +125,7 @@ export default ({ setOpenModal, setModalData }) => {
             onClick={() => handleClick(getMedia, "media")}
           />
         </div>
-      </div>
+      </div> */}
 
       <div class='col3'>
         <div class="med-bubble">
