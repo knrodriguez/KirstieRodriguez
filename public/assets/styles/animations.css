@@ -13,17 +13,29 @@
 @keyframes move-left-to-right {
   0% {
     transform: translate(-100%);
+    font-style: italic;
   }
   50% {
     transform: translate(10%);
+    font-style: italic;
   }
   75% {
     transform: translate(-5%);
+    font-style: italic;
   }
   90%{
     transform: translate(1%);
   }
   100%{
     transform: translate(0);
+  }
+}
+
+@keyframes type {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

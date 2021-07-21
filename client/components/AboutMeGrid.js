@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { getMedia, getGames } from "../reducers";
 
 const WIDE_BUBBLE_SRC = "assets/images/dream-bubble.png";
 const ROUND_BUBBLE_SRC = "assets/images/thick-round-outline3.png";
 
-export default ({ setOpenModal, setModalData }) => {
+export default ({ setOpenModal, setModalData, setCoding }) => {
 
   async function handleClick(e, func, type) {
     const data = await func();
@@ -15,7 +15,7 @@ export default ({ setOpenModal, setModalData }) => {
   return (
     <div class="aboutme-container">
       <div class="one-row title">
-        <p>INSIDE KIRSTIE'S MIND</p>
+        <h1>INSIDE KIRSTIE'S MIND</h1>
       </div>
 
       <div class='bottom-row floating black flex-center'
@@ -43,7 +43,7 @@ export default ({ setOpenModal, setModalData }) => {
       </div>
       
       <div class='bottom-row floating flex-center'
-       onClick={() => handleClick(getGames, 'media')}
+       onClick={() => setCoding(true)}
       >
         <div class='cloud flex-center'>
           <img src={WIDE_BUBBLE_SRC} />

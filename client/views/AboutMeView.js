@@ -14,7 +14,7 @@ export default (props) => {
   return (
     <div>
       {openModal && <Modal {...modalData} closeModal={closeModal} />}
-      <AboutMeGrid setOpenModal={setOpenModal} setModalData={setModalData} />
+      <AboutMeGrid setOpenModal={setOpenModal} setModalData={setModalData} {...props}/>
     </div>
   );
 };

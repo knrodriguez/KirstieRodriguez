@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import { AboutMeView, TechStackView } from "./views";
-import { AboutMeGrid } from "./components";
 
 const App = () => {
+  const [coding, setCoding] = useState(false);
+
   return (
     <>
-      <AboutMeView />
-      {/* <TechStackView /> */}
-      {/* <AboutMeGrid /> */}
+      <AboutMeView setCoding={setCoding}/>
+      { coding && 
+        <>
+          <TechStackView/>
+        </>
+      }
     </>
   );
 };
