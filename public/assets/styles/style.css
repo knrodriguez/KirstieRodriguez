@@ -325,6 +325,10 @@ img {
   #coding {
     width: 100%;
   }
+  .tech-stack-item:hover{
+    padding-bottom: 5%;
+    font-size: 1em;
+  }
 }
 
  @media screen and (min-width: 1350px){
@@ -339,6 +343,9 @@ img {
   }
   #coding {
     width: 90%;
+  }
+  .tech-stack-item:hover{
+    padding-bottom: 3%;
   }
 }
 
@@ -411,6 +418,7 @@ img {
   padding: 6%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   flex-shrink: 1;
 }
 
@@ -425,7 +433,9 @@ img {
   width: 30%;
   padding: 1%;
   min-height: 200px;
-  text-shadow: 1px 1px gray;
+  text-shadow: 1px 1px black;
+  color: whitesmoke;
+  font-size: 1.2rem;
 }
 
 .tech-stack-icon-container{
@@ -437,6 +447,9 @@ img {
   background-image: url('../images/action-bubble.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 300px 265px;
-  justify-items: space-around;
+  background-size: cover;
+  justify-content: center;
+  color: black;
+  text-shadow: 1px 1px white;
+  font-size: 1em;
 }
