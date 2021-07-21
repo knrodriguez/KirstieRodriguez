@@ -1,76 +1,13 @@
+@import "animations.css";
+@import "fonts.css";
+
 * {
   margin: 0;
   padding: 0;
 }
 
-@font-face{
-  font-family: cloudy;
-  src: url('../fonts/Alphaclouds-EGMW.ttf');
-}
-
-@font-face{
-  font-family: smoke;
-  src: url('../fonts/Alphasmoke-OOX6.ttf');
-}
-
-@font-face {
-  font-family: comic-title;
-  src: url('../fonts/RoleyPoley-gxRop.otf');
-}
-
-/* body{
-    background-image: url('../images/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: scroll;
-} */
-
 img {
   max-width: 100%;
-}
-
-.fixed-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.relative {
-  position: relative;
-  bottom: 0px;
-  left: 0px;
-  height: auto;
-  width: 100%;
-}
-
-.image-container-micro {
-  /* width: 30px; */
-  width: 2%;
-  height: auto;
-}
-
-.image-container-mini {
-  /* width: 50px; */
-  width: 3%;
-  height: auto;
-}
-
-.image-container-sm {
-  /* width: 75px; */
-  width: 4%;
-  height: auto;
-}
-
-.image-container-md {
-  /* width: 300px; */
-  width: 23%;
-  height: auto;
-}
-
-.image-container-lg {
-  width: 350px;
-  height: auto;
 }
 
 .flex-container {
@@ -98,7 +35,7 @@ img {
   z-index: 2;
 }
 
-@media screen and (min-width: 1601px){
+/* @media screen and (min-width: 1601px){
   #modal-data-container img {
     width: 300px;
     height: auto;
@@ -106,9 +43,12 @@ img {
   #modal-data-container {
     font-size: 1.3em;
   }
-}
+  .img-container{
+    max-width: 45%;
+  }
+} */
 
-@media screen and (max-width: 1600px) and (min-width: 1351px){
+/* @media screen and (max-width: 1600px) and (min-width: 1351px){
   .title{
     justify-content: center;
   }
@@ -164,7 +104,7 @@ img {
   .title h1{
     font-size: 1.2em;
   }
-}
+} */
 
 #modal-data-container {
   display: flex;
@@ -232,24 +172,6 @@ img {
   border-radius: 15px 0px 0px 15px;
 }
 
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(0, 10px);
-  }
-  100% {
-    transform: translate(0, -0px);
-  }
-}
-
-.floating {
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
 
 .games {
   animation-delay: 0.25s;
@@ -259,94 +181,10 @@ img {
   animation-delay: 0.6s;
 }
 
-#tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.tech-stack-item {
-  width: 20%;
-  height: auto;
-  margin: 2% 2%;
-}
-
-.wide-bubble {
-  /* display: grid;
-  align-items: flex-end;
-  justify-items: center; */
-  grid-area: auto / span 4;
-}
-/* 
-.wide-bubble img {
-  width: 70%;
-}
-
-.wide-bubble *{
-  cursor: pointer;
-} */
-
-.aboutme-container {
-  max-height: 100%;
-  max-width: 100%;
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  /* grid-template-rows: 0.3fr 1.2fr 1fr; */
-  grid-template-rows: 1fr 1fr 1fr;
-  background-image: url('../images/imageedit_47_8943911883.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .center {
   align-self: center;
-}
-
-.one-row {
-  grid-area: auto / span 12;
-}
-
-.col3{
-  grid-area: auto / span 3;
-}
-
-.med-bubble{
-  width: 12%;
-  float: right;
-  padding-top: 5%;
-}
-
-.small-bubble{
-  position: relative;
-  width: 20%;
-  top: 30%;
-  left: 40%;
-}
-
-.mini-bubble{
-  width: 10%;
-  position: relative;
-  left: 40%;
-  top: 70%;
-}
-
-.me{
-  grid-column: span 6;
-  background-image: url("../images/me0.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-}
-
-.title{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: comic-title;
-  font-size: 3em;
-  padding-top: 2%;
-  padding-left: 2%;
 }
 
 .title h1{
@@ -364,20 +202,6 @@ img {
   }
 }
 
-.coding{
-  position: absolute;
-  width: 100%;
-  top:0;
-  right:0;
-  height: auto;
-  z-index: 2;
-}
-
-.coding img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .cell-span-4-container{
   display: flex;
   justify-content: center;
@@ -393,7 +217,7 @@ img {
   z-index: 2;    
   position: absolute; 
   max-width: 60%;
-  padding-bottom: 8%;
+  margin: auto;
 }
 
 .cursor-hover{
@@ -402,4 +226,168 @@ img {
 
 .flex-start{
   align-self: flex-start;
+} 
+
+.width40{
+  width: 40%;
+}
+
+.width80{
+  max-width: 90%;
+}
+
+.padding-bottom{
+  padding-bottom: 8%;
+}
+.img-container, .overlay-img-container{
+  max-width: 80%;
+}
+
+/*-------------------------------------------*/
+
+.aboutme-container {
+  max-height: 100%;
+  max-width: 100%;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  background-image: url('../images/imageedit_47_8943911883.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: comic-title;
+  font-size: 5em;
+  padding-top: 2%;
+  padding-left: 2%;
+  text-shadow: 2px 2px whitesmoke;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one-row {
+  grid-area: span 2 / span 12;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.bottom-row{
+  grid-row: 4 / 9;
+  grid-column: span 4;
+}
+
+.cloud img:hover,
+.overlay:hover{
+  cursor: pointer;
+}
+
+.overlay{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#game{
+  width: 50%;
+}
+
+#coding {
+  width: 90%;
+}
+
+.top-row{
+  grid-row: 3 / span 5;
+  grid-column: span 4;
+}
+
+@media screen and (min-width: 500px){
+  #media{
+    width: 70%;
+  }
+  #game{
+    width: 40%;
+  }
+  #coding {
+    width: 100%;
+  }
+}
+
+ @media screen and (min-width: 1350px){
+  .cloud{
+    max-width: 80%;
+  }
+  #media{
+    width: 60%;
+  }
+  #game{
+    width: 30%;
+  }
+  #coding {
+    width: 90%;
+  }
+}
+
+#row10{
+  grid-row-start: 10;
+  grid-column-start: 4;
+}
+
+#row11{
+  grid-row-start: 11;
+  grid-column-start: 5;
+}
+
+#row12{
+  grid-row-start: 12;
+  grid-column-start: 6;
+}
+
+.me{
+  grid-area: 9 / 7 / -1 / -1 ;
+  background-image: url("../images/me0.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.col3{
+  grid-area: 9 / span 3;
+}
+
+.med-bubble{
+  width: 12%;
+  float: right;
+}
+
+.small-bubble{
+  position: relative;
+  width: 20%;
+  top: 60%;
+  left: 40%;
+  float: right;
+}
+
+.mini-bubble{
+  width: 10%;
+  position: relative;
+  float: right;
+  left: 40%;
 }

@@ -1,0 +1,14 @@
+@font-face{
+    font-family: cloudy;
+    src: url('../fonts/Alphaclouds-EGMW.ttf');
+  }
+  
+  @font-face{
+    font-family: smoke;
+    src: url('../fonts/Alphasmoke-OOX6.ttf');
+  }
+  
+  @font-face {
+    font-family: comic-title;
+    src: url('../fonts/RoleyPoley-gxRop.otf');
+  }

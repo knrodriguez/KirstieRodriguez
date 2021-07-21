@@ -6,7 +6,7 @@ const ROUND_BUBBLE_SRC = "assets/images/thick-round-outline3.png";
 
 export default ({ setOpenModal, setModalData }) => {
 
-  async function handleClick(func, type) {
+  async function handleClick(e, func, type) {
     const data = await func();
     setModalData({ data, type });
     setOpenModal(true);
@@ -15,117 +15,44 @@ export default ({ setOpenModal, setModalData }) => {
   return (
     <div class="aboutme-container">
       <div class="one-row title">
-        <h1>INSIDE KIRSTIE'S MIND</h1>
+        <p>INSIDE KIRSTIE'S MIND</p>
       </div>
 
-      <div class='floating cell-span-4-container'>
-        <div class='img-container cursor-hover'>
-          <img src={WIDE_BUBBLE_SRC}/>
+      <div class='bottom-row floating black flex-center'
+         onClick={(e) => handleClick(e, getMedia, 'media')}
+      >
+        <div class='cloud flex-center'>
+          <img src={WIDE_BUBBLE_SRC} />
         </div>
-        <div class='overlay-img-container cursor-hover'>
-          <img src='assets/images/tv.gif'/>
-        </div>
-      </div>
 
-      <div class='floating cell-span-4-container'>
-        <div class='img-container cursor-hover flex-start'>
-          <img src={WIDE_BUBBLE_SRC}/>
-        </div>
-        <div class='overlay-img-container cursor-hover flex-start'
-        style = {{
-          width: '35%'
-        }}>
-          <img src='assets/images/game.gif'/>
+        <div class='overlay flex-center'>
+            <img id='media' src='assets/images/tv.gif'/>
         </div>
       </div>
 
+      <div class='top-row floating green flex-center'
+        onClick={() => handleClick(getGames, 'media')}
+      >
+        <div class='cloud flex-center'>
+          <img src={WIDE_BUBBLE_SRC} />
+        </div>
 
-      {/* <div class="wide-bubble floating" style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gridTemplateRows: '1fr',
-      }}>
-        <div style={{
-          gridColumnStart: '1',
-          gridRowStart: '1',
-          zIndex: '2',
-          width: '65%',
-          textAlign: 'center',
-          marginBottom: '5%'
-        }}
-        onClick={() => handleClick(getMedia, "media")}>
-          <img src='assets/images/tv.gif'/>
-        </div>
-        
-        <div class="wide-bubble" style={{
-          gridColumnStart: '1',
-          gridRowStart: '1'
-        }}>
-          <img
-            src={WIDE_BUBBLE_SRC}
-            class='tv-and-movies'
-            onClick={() => handleClick(getMedia, "media")}
-          />
-        </div>
-      </div> */}
-
-      {/* <div class="wide-bubble center floating" style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gridTemplateRows: '1fr',
-      }} >
-        <div class='center' style={{
-          gridColumnStart: '1',
-          gridRowStart: '1',
-          zIndex: '2',
-          maxWidth: '50%',
-          width: '35%',
-          textAlign: 'center',
-          marginBottom: '5%',
-        }}
-        onClick={() => handleClick(getGames, "game")}>
-          <img src='assets/images/game.gif'/>
-        </div>
-        
-        <div class="wide-bubble" style={{
-          gridColumnStart: '1',
-          gridRowStart: '1'
-        }}>
-          <img
-            src={WIDE_BUBBLE_SRC}
-            class='center games'
-            onClick={() => handleClick(getGames, "game")}
-          />
+        <div class='overlay flex-center'>
+          <img id='game' src='assets/images/game.gif'/>
         </div>
       </div>
+      
+      <div class='bottom-row floating flex-center'
+       onClick={() => handleClick(getGames, 'media')}
+      >
+        <div class='cloud flex-center'>
+          <img src={WIDE_BUBBLE_SRC} />
+        </div>
 
-      <div class="wide-bubble floating" style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gridTemplateRows: '1fr'
-      }}>
-        <div style={{
-          gridColumnStart: '1',
-          gridRowStart: '1',
-          zIndex: '2',
-          width: '100%',
-          textAlign: 'center'
-        }}
-        onClick={() => handleClick(getMedia, "media")}>
-          <img src='assets/images/coding.gif'/>
+        <div class='overlay flex-center'>
+          <img id='coding' src='assets/images/coding.gif'/>
         </div>
-        
-        <div class="wide-bubble" style={{
-          gridColumnStart: '1',
-          gridRowStart: '1'
-        }}>
-          <img
-            src={WIDE_BUBBLE_SRC}
-            class='projects'
-            onClick={() => handleClick(getMedia, "media")}
-          />
-        </div>
-      </div> */}
+      </div> 
 
       <div class='col3'>
         <div class="med-bubble">
@@ -137,34 +64,28 @@ export default ({ setOpenModal, setModalData }) => {
         </div>
       </div>
 
-      <div>
-        <div class="small-bubble">
-          <img
-            src={ROUND_BUBBLE_SRC}
-            class='floating'
-            onClick={() => handleClick(getMedia, "media")}
-          />
-        </div>
+      <div id='row10' class="small-bubble">
+        <img
+          src={ROUND_BUBBLE_SRC}
+          class='floating'
+          onClick={() => handleClick(getMedia, "media")}
+        />
       </div>
 
-      <div>
-        <div class="small-bubble" style={{top: '50%'}}>
-          <img
-            src={ROUND_BUBBLE_SRC}
-            class='floating'
-            onClick={() => handleClick(getMedia, "media")}
-          />
-        </div>
+      <div id='row11' class="small-bubble" style={{top: '50%'}}>
+        <img
+          src={ROUND_BUBBLE_SRC}
+          class='floating'
+          onClick={() => handleClick(getMedia, "media")}
+        />
       </div>
-    
-      <div>
-        <div class="mini-bubble">
-          <img
-            src={ROUND_BUBBLE_SRC}
-            class='floating'
-            onClick={() => handleClick(getMedia, "media")}
-          />
-        </div>
+
+      <div id='row12' class="mini-bubble">
+        <img
+          src={ROUND_BUBBLE_SRC}
+          class='floating'
+          onClick={() => handleClick(getMedia, "media")}
+        />
       </div>
 
       <div class='me'></div>
