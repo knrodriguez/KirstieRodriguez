@@ -267,6 +267,7 @@ img {
   padding-top: 2%;
   padding-left: 2%;
   text-shadow: 2px 2px whitesmoke;
+  animation: move-left-to-right 2s ease-in-out 1;
 }
 
 .flex-center{
