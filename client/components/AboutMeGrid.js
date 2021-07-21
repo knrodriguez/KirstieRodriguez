@@ -4,7 +4,7 @@ import { getMedia, getGames } from "../reducers";
 const WIDE_BUBBLE_SRC = "assets/images/dream-bubble.png";
 const ROUND_BUBBLE_SRC = "assets/images/thick-round-outline3.png";
 
-export default ({ setOpenModal, setModalData, setCoding }) => {
+export default ({ setOpenModal, setModalData, setCoding, coding }) => {
 
   async function handleClick(e, func, type) {
     const data = await func();
@@ -19,8 +19,7 @@ export default ({ setOpenModal, setModalData, setCoding }) => {
       </div>
 
       <div class='bottom-row floating black flex-center'
-         onClick={(e) => handleClick(e, getMedia, 'media')}
-      >
+         onClick={(e) => handleClick(e, getMedia, 'media')}>
         <div class='cloud flex-center'>
           <img src={WIDE_BUBBLE_SRC} />
         </div>
@@ -31,8 +30,7 @@ export default ({ setOpenModal, setModalData, setCoding }) => {
       </div>
 
       <div class='top-row floating green flex-center'
-        onClick={() => handleClick(getGames, 'media')}
-      >
+        onClick={() => handleClick(getGames, 'media')}>
         <div class='cloud flex-center'>
           <img src={WIDE_BUBBLE_SRC} />
         </div>
@@ -43,13 +41,13 @@ export default ({ setOpenModal, setModalData, setCoding }) => {
       </div>
       
       <div class='bottom-row floating flex-center'
-       onClick={() => setCoding(true)}
-      >
+       onClick={() => setCoding(coding++)}>
         <div class='cloud flex-center'>
           <img src={WIDE_BUBBLE_SRC} />
         </div>
 
-        <div class='overlay flex-center'>
+        <div class='overlay flex-center'
+          onClick={() => setCoding(coding++)}>
           <img id='coding' src='assets/images/coding.gif'/>
         </div>
       </div> 

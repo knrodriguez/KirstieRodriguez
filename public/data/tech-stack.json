@@ -7,79 +7,79 @@
   },
   {
     "name": "React",
-    "iconPath": "",
+    "iconPath": "react.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "Express",
-    "iconPath": "",
+    "iconPath": "express.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "PostgreSQL",
-    "iconPath": "",
+    "iconPath": "postgresql.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "HTML 5",
-    "iconPath": "",
+    "iconPath": "html5.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "CSS 3",
-    "iconPath": "",
+    "iconPath": "css3.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "Git",
-    "iconPath": "",
+    "iconPath": "git.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "GitHub",
-    "iconPath": "",
+    "iconPath": "github.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "Material UI",
-    "iconPath": "",
+    "iconPath": "materialui.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "Redux",
-    "iconPath": "",
+    "iconPath": "redux.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "Webpack",
-    "iconPath": "",
+    "iconPath": "webpack.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "React Native",
-    "iconPath": "",
+    "iconPath": "react.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "Heroku",
-    "iconPath": "",
+    "iconPath": "heroku.png",
     "description": "",
     "docLink": ""
   },
   {
     "name": "Firebase",
-    "iconPath": "",
+    "iconPath": "firebase.png",
     "description": "",
     "docLink": ""
   }

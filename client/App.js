@@ -3,14 +3,14 @@ import ReactDOM from "react-dom";
 import { AboutMeView, TechStackView } from "./views";
 
 const App = () => {
-  const [coding, setCoding] = useState(false);
+  const [coding, setCoding] = useState(0);
 
   return (
     <>
-      <AboutMeView setCoding={setCoding}/>
-      { coding && 
+      <AboutMeView coding={coding} setCoding={setCoding}/>
+      { !!coding && 
         <>
-          <TechStackView/>
+          <TechStackView coding={coding}/>
         </>
       }
     </>
