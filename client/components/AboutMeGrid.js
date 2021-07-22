@@ -18,7 +18,7 @@ export default ({ setOpenModal, setModalData, setCoding, coding }) => {
         <h1>INSIDE KIRSTIE'S MIND</h1>
       </div>
 
-      <div class='bottom-row floating black flex-center'
+      <div class='bottom-row floating flex-center'
          onClick={(e) => handleClick(e, getMedia, 'media')}>
         <div class='cloud flex-center'>
           <img src={WIDE_BUBBLE_SRC} />
