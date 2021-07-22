@@ -12,9 +12,9 @@ export default (props) => {
   }
 
   return (
-    <div>
+    <section>
       {openModal && <Modal {...modalData} closeModal={closeModal} />}
       <AboutMeGrid setOpenModal={setOpenModal} setModalData={setModalData} {...props}/>
-    </div>
+    </section>
   );
 };

@@ -2,85 +2,71 @@
   {
     "name": "Node.js",
     "iconPath": "nodejs.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://nodejs.org/"
   },
   {
     "name": "React",
     "iconPath": "react.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://reactjs.org/"
   },
   {
     "name": "Express",
     "iconPath": "express.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://expressjs.com/"
   },
   {
     "name": "PostgreSQL",
     "iconPath": "postgresql.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://www.postgresql.org/"
   },
   {
     "name": "HTML 5",
     "iconPath": "html5.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://developer.mozilla.org/en-US/docs/Web/HTML"
   },
   {
     "name": "CSS 3",
     "iconPath": "css3.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://developer.mozilla.org/en-US/docs/Web/CSS"
   },
   {
     "name": "Git",
     "iconPath": "git.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://git-scm.com/"
   },
   {
     "name": "GitHub",
     "iconPath": "github.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://github.com/"
   },
   {
     "name": "Material UI",
     "iconPath": "materialui.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://material-ui.com/"
   },
   {
     "name": "Redux",
     "iconPath": "redux.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://redux.js.org/"
   },
   {
     "name": "Webpack",
     "iconPath": "webpack.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://webpack.js.org/"
   },
   {
     "name": "React Native",
     "iconPath": "react.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://reactnative.dev/"
   },
   {
     "name": "Heroku",
     "iconPath": "heroku.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://www.heroku.com/"
   },
   {
     "name": "Firebase",
     "iconPath": "firebase.png",
-    "description": "",
-    "docLink": ""
+    "docLink": "https://firebase.google.com/"
   }
 ]

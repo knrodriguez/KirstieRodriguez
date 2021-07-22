@@ -23,7 +23,6 @@ export default ({coding}) => {
       techStackRef.current.scrollIntoView({behavior: "smooth"})
   }
 
-  console.log(coding)
   return (
     <section id="tech-stack-view" ref={techStackRef}>
       <h1>Tech Stack <br/> (on Stacks on Stacks)</h1>

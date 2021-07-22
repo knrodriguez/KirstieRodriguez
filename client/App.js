@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
-import { AboutMeView, TechStackView } from "./views";
+import { AboutMeView, TechStackView, ProjectsView } from "./views";
 
 const App = () => {
   const [coding, setCoding] = useState(0);
@@ -11,6 +11,7 @@ const App = () => {
       { !!coding && 
         <>
           <TechStackView coding={coding}/>
+          <ProjectsView />
         </>
       }
     </>
